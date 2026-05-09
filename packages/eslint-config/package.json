@@ -1,0 +1,7 @@
+{
+  "name": "@stockflow/eslint-config",
+  "version": "1.0.0",
+  "private": "true",
+  "main": "index.js",
+  "packageManager": "pnpm@10.32.1"
+}
