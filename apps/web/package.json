@@ -1,0 +1,29 @@
+{
+  "name": "@stockflow/web",
+  "private": true,
+  "version": "0.0.0",
+  "main": "./dist/src/index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint . --fix",
+    "format": "prettier --write src",
+    "preview": "vite preview"
+  },
+  "packageManager": "pnpm@10.32.1",
+  "dependencies": {
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5"
+  },
+  "devDependencies": {
+    "@stockflow/eslint-config": "workspace:*",
+    "@stockflow/prettier-config": "workspace:*",
+    "@types/node": "^24.12.2",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "vite": "^8.0.10"
+  }
+}

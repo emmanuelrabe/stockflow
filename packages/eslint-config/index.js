@@ -21,6 +21,7 @@ export default defineConfig ([
       globals: {
         ...globals.node,
         ...globals.es2022,
+        ...globals.browser
       },
       parserOptions: {
         warnOnUnsupportedTypeScriptVersion: false,
