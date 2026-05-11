@@ -101,6 +101,13 @@ module.exports = {
 
 Once the module is created, run `pnpm install` in the root directory. **Turborepo** will automatically detect the new scripts and include them in the global pipeline (`pnpm build`, `pnpm lint`, etc.).
 
+--- 
+### DATABASE 
+You have the option of running PostgreSQL locally or using a .env file with
+
+```
+    DATABASE_URL="postgresql://neondb_owner:npg_ox3RmGMri2Ud@ep-morning-dawn-ap73i4zy-pooler.c-7.us-east-1.aws.neon.tech/needcy_db?sslmode=require&channel_binding=require"
+```
 ---
 
 ## Available Scripts (Root)

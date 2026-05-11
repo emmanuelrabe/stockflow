@@ -317,14 +317,13 @@ export async function updateOrderStatus(req: Request, res: Response, next: NextF
             where: { id: order.id },
             data: { status },
             select: {
-                 items: true
-            }
-        })  
+                items: true,
+            },
+        })
 
         if (status === 'delivered') {
             // update stock of products
         }
-
 
         const updatedOrder = await db.order.update({
             where: { id: order.id },
@@ -341,7 +340,7 @@ export async function deleteOrder(req: Request, res: Response, next: NextFunctio
     try {
         const id = req.params.id as string
 
-        const order = await db.order.findFirst({ where: { id: parseInt(id) }})
+        const order = await db.order.findFirst({ where: { id: parseInt(id) } })
         if (!order) {
             throw new ApiError(404, 'Le produit est introuvable.')
         }
@@ -349,10 +348,10 @@ export async function deleteOrder(req: Request, res: Response, next: NextFunctio
         const isPendingOrder = await db.order.findFirst({
             where: {
                 status: 'pending',
-            }
+            },
         })
         if (isPendingOrder) {
-            throw new ApiError(409, 'Impossible de supprimer cette commande,  il est en état d\'attente.')
+            throw new ApiError(409, "Impossible de supprimer cette commande,  il est en état d'attente.")
         }
 
         await db.order.delete({
