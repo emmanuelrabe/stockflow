@@ -108,6 +108,13 @@ You have the option of running PostgreSQL locally or using a .env file with
 ```
     DATABASE_URL="postgresql://neondb_owner:npg_ox3RmGMri2Ud@ep-morning-dawn-ap73i4zy-pooler.c-7.us-east-1.aws.neon.tech/needcy_db?sslmode=require&channel_binding=require"
 ```
+
+Pour generer le client prisma (orm)/
+```cmd
+```
+  cd apps/api
+  pnpm db:migrate
+  pnpm db:generate
 ---
 
 ## Available Scripts (Root)
