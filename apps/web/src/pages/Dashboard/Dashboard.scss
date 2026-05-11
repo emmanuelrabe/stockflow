@@ -1,0 +1,175 @@
+#dashboard {
+    .inventory-overview {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-bottom: 30px;
+
+        &__card {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding: 25px 20px;
+            min-width: 225px;
+            border-radius: 12px;
+            border: 1px solid #e2e7e7ad;
+            background-color: #fff;
+
+            &__icon {
+                height: 45px;
+                width: 45px;
+            }
+
+            &__value {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-size: 30px;
+                font-weight: 600;
+
+                .badge {
+                    display: inline-block;
+                    padding: 5px 10px;
+                    font-size: 13px;
+                    border-radius: 10px;
+
+                    &:is(.success) {
+                        background-color: #eefcf4;
+                        color: #56dc92;
+                    }
+
+                    &:is(.info) {
+                        background-color: #56a0dc;
+                        color: #56a0dc;
+                    }
+
+                    &:is(.warning) {
+                        background-color: #fcf6ee;
+                        color: #dca956;
+                    }
+
+                    &:is(.danger) {
+                        background-color: #fceeee;
+                        color: #dc5656;
+                    }
+                }
+            }
+
+            &__title {
+                font-size: 16px;
+            }
+
+            &__link {
+                font-size: 0.9rem;
+                color: #7e56dc;
+            }
+        }
+    }
+
+    .critical-alerts {
+        padding: 15px 0;
+        margin-bottom: 30px;
+        width: 100%;
+
+        &__heading {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        &__content {
+            width: 100%;
+            overflow-x: auto;
+
+            table {
+                width: 100%;
+                min-width: 1000px;
+            }
+        }
+    }
+
+    .orders-overview {
+        .pending-orders {
+            margin-bottom: 20px;
+
+            &__card {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                padding: 25px 20px;
+                min-width: 225px;
+                border-radius: 12px;
+                border: 1px solid #e2e7e7ad;
+                background-color: #fff;
+
+                &__icon {
+                    height: 45px;
+                    width: 45px;
+                }
+
+                &__value {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-size: 30px;
+                    font-weight: 600;
+
+                    .badge {
+                        display: inline-block;
+                        padding: 5px 10px;
+                        font-size: 13px;
+                        border-radius: 10px;
+
+                        &:is(.success) {
+                            background-color: #eefcf4;
+                            color: #56dc92;
+                        }
+
+                        &:is(.info) {
+                            background-color: #56a0dc;
+                            color: #56a0dc;
+                        }
+
+                        &:is(.warning) {
+                            background-color: #fcf6ee;
+                            color: #dca956;
+                        }
+
+                        &:is(.danger) {
+                            background-color: #fceeee;
+                            color: #dc5656;
+                        }
+                    }
+                }
+
+                &__title {
+                    font-size: 16px;
+                }
+
+                &__link {
+                    font-size: 0.9rem;
+                    color: #7e56dc;
+                }
+            }
+        }
+
+        .recent-orders {
+            &__heading {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+
+            &__content {
+                width: 100%;
+                overflow-x: auto;
+
+                table {
+                    width: 100%;
+                    min-width: 600px;
+                }
+            }
+        }
+    }
+}

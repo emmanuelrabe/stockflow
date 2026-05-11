@@ -1,0 +1,47 @@
+#inventory {
+    .filter-bar {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+
+        & > * {
+            flex-grow: 1;
+        }
+    }
+
+    .pagination {
+        display: flex;
+        justify-content: flex-end;
+        gap: 15px;
+        margin-bottom: 20px;
+
+        &__current-index {
+            width: 100px;
+        }
+
+        .button {
+            span {
+                display: none;
+            }
+        }
+
+        @media screen and (min-width: 450px) {
+            .button {
+                span {
+                    display: inline;
+                }
+            }
+        }
+    }
+
+    .inventory {
+        width: 100%;
+        overflow: auto;
+
+        table {
+            min-width: 700px;
+            width: 100%;
+        }
+    }
+}

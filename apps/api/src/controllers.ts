@@ -313,25 +313,18 @@ export async function updateOrderStatus(req: Request, res: Response, next: NextF
             throw new ApiError(409, 'Impossible de modifier le status.')
         }
 
-        const updateOrder = await db.order.update({
+        await db.order.update({
             where: { id: order.id },
             data: { status },
             select: {
                  items: true
             }
-        })
+        })  
 
-        await db.product.updateMany({
-            where: { 
-                orderItems: { 
-                    some: { 
-                        orderId: order.id
-                    }}
-                },
-            data: {
-                stock: { increment: 1 }
-            }
-        })
+        if (status === 'delivered') {
+            // update stock of products
+        }
+
 
         const updatedOrder = await db.order.update({
             where: { id: order.id },

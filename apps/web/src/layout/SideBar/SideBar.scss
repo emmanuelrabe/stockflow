@@ -1,0 +1,93 @@
+$side-bar-brand-height: 70px;
+$side-bar-logout-heigt: 50px;
+$side-bar-padding: 20px;
+
+.side-bar {
+    display: none;
+    flex-shrink: 0;
+    position: fixed;
+    height: 100vh;
+    width: 260px;
+    background-color: #fff;
+    border-right: 1px solid #e2e7e7;
+
+    &__brand {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 15px $side-bar-padding;
+        gap: 10px;
+        height: $side-bar-brand-height;
+        border-bottom: 1px solid #e2e7e7;
+
+        &__logo {
+            height: 30px;
+            width: 30px;
+        }
+
+        &__name {
+            font-size: 18px;
+        }
+    }
+
+    &__menu {
+        position: relative;
+        background-color: #fff;
+        height: calc(100vh - $side-bar-brand-height);
+        overflow-y: hidden;
+
+        &__nav {
+            padding: $side-bar-padding;
+            overflow-y: auto;
+            height: calc(100vh - $side-bar-brand-height);
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+
+            &__item {
+                &__link {
+                    border-radius: 8px;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    padding: 10px 15px;
+                    transition: 0.3s;
+
+                    svg {
+                        height: 24px;
+                        width: 24px;
+                        flex-shrink: 0;
+                    }
+                    &:hover {
+                        background-color: #dae4f8;
+                    }
+
+                    &:is(.active) {
+                        background-color: #7e56dc;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        &__footer {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            padding: $side-bar-padding;
+            background-color: #fff;
+
+            &__button {
+                cursor: pointer;
+                background-color: transparent;
+                border: none;
+                transition: 0.3s;
+
+                &:active {
+                    background-color: #dae4f8;
+                }
+            }
+        }
+    }
+}

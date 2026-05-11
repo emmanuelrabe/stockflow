@@ -1,0 +1,49 @@
+$main-header-height: 70px;
+
+#root {
+    main {
+        width: 100%;
+        background-color: #fafbfc;
+
+        .header {
+            padding: 15px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
+
+            &__title {
+                font-size: 24px;
+            }
+        }
+
+        .main-content {
+            padding: 25px;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        .side-bar {
+            display: block;
+        }
+
+        .top-bar {
+            display: none;
+        }
+
+        main {
+            width: calc(100% - 260px);
+            margin-left: 260px;
+
+            .header {
+                position: sticky;
+                top: 0;
+                height: $main-header-height;
+                padding: 0 30px;
+                background-color: #fff;
+                border-bottom: 1px solid #e2e7e7;
+            }
+        }
+    }
+}

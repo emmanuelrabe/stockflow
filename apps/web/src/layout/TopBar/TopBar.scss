@@ -1,0 +1,44 @@
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: #f4f6fa;
+
+    &__brand {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        &__logo {
+            height: 30px;
+            width: 30px;
+        }
+
+        &__name {
+            font-size: 18px;
+            font-weight: 600;
+        }
+    }
+
+    &__menu {
+        &__button {
+            display: flex;
+            padding: 5px;
+            border-radius: 8px;
+            border: 1px solid transparent;
+            background-color: transparent;
+            transition: 0.3s;
+            cursor: pointer;
+
+            &__icon {
+                height: 30px;
+                width: 30px;
+            }
+
+            &:hover {
+                background-color: #dae4f8;
+            }
+        }
+    }
+}
