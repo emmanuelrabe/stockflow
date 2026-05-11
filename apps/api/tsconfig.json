@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowJs": true,
+    "incremental": true,
+    "checkJs": false,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "tsBuildInfoFile": "./dist/.tsbuildinfo",
+    "target": "es2022", 
+    "module": "node16",
+    "moduleResolution": "node16",
+    "lib": ["esnext"],
+    "types": ["node"],
+    "outDir": "./dist",
+    "sourceMap": true,
+  },
+  "exclude": ["node_modules", "dist"]
+}
