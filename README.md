@@ -111,10 +111,11 @@ You have the option of running PostgreSQL locally or using a .env file with
 
 Pour generer le client prisma (orm)/
 ```cmd
-```
   cd apps/api
   pnpm db:migrate
   pnpm db:generate
+```
+
 ---
 
 ## Available Scripts (Root)
